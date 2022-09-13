@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ColorTextFieldView: View {
     @State private var alertPresented = false
-    @FocusState var isInputActive: Bool
     @Binding var value: Double
     
     init(value: Binding<Double> = .constant(0)) {
@@ -17,24 +16,18 @@ struct ColorTextFieldView: View {
     }
     
     var body: some View {
-            TextField("255", value: $value, formatter: NumberFormatter())
+            TextField("255", value: $value, formatter: NumberFormatter(), onCommit: checkColorValue)
                 .textFieldStyle(.roundedBorder)
                 .keyboardType(.decimalPad)
                 .frame(width: 50)
-                .focused($isInputActive)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        Button("Done") {
-                            checkColorValue()
-                            isInputActive = false
-                        }
-                        .alert("Wrong value!", isPresented: $alertPresented, actions: {}, message: {
-                            Text("Enter correct value")
-                        })
-                    }
-                }
+                .alert("Wrong value!",
+                       isPresented: $alertPresented,
+                       actions: {},
+                       message: {
+                        Text("Enter correct value")
+                })
         }
+    
     private func checkColorValue() {
         if value > 255 || value < 0 {
             alertPresented.toggle()

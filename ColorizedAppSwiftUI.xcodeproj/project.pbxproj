@@ -13,7 +13,7 @@
 		891703FA28D074B600F7E08F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 891703F928D074B600F7E08F /* Preview Assets.xcassets */; };
 		8917040128D074CE00F7E08F /* ColorSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917040028D074CE00F7E08F /* ColorSliderView.swift */; };
 		8917040528D07EDC00F7E08F /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8917040428D07EDC00F7E08F /* ColorView.swift */; };
-		8919CC2128D08FF700549947 /* ColotTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919CC2028D08FF700549947 /* ColotTextFieldView.swift */; };
+		8919CC2128D08FF700549947 /* ColorTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919CC2028D08FF700549947 /* ColorTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,7 @@
 		891703F928D074B600F7E08F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8917040028D074CE00F7E08F /* ColorSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSliderView.swift; sourceTree = "<group>"; };
 		8917040428D07EDC00F7E08F /* ColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
-		8919CC2028D08FF700549947 /* ColotTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColotTextFieldView.swift; sourceTree = "<group>"; };
+		8919CC2028D08FF700549947 /* ColorTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				891703F228D074B300F7E08F /* ColorizedAppSwiftUIApp.swift */,
 				891703F428D074B300F7E08F /* ContentView.swift */,
 				8917040028D074CE00F7E08F /* ColorSliderView.swift */,
-				8919CC2028D08FF700549947 /* ColotTextFieldView.swift */,
+				8919CC2028D08FF700549947 /* ColorTextFieldView.swift */,
 				8917040428D07EDC00F7E08F /* ColorView.swift */,
 				891703F628D074B600F7E08F /* Assets.xcassets */,
 				891703F828D074B600F7E08F /* Preview Content */,
@@ -147,7 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8917040528D07EDC00F7E08F /* ColorView.swift in Sources */,
-				8919CC2128D08FF700549947 /* ColotTextFieldView.swift in Sources */,
+				8919CC2128D08FF700549947 /* ColorTextFieldView.swift in Sources */,
 				891703F528D074B300F7E08F /* ContentView.swift in Sources */,
 				891703F328D074B300F7E08F /* ColorizedAppSwiftUIApp.swift in Sources */,
 				8917040128D074CE00F7E08F /* ColorSliderView.swift in Sources */,
