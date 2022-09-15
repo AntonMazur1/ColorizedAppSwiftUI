@@ -12,22 +12,31 @@ struct ContentView: View {
     @State private var greenSliderValue: Double = 0
     @State private var blueSliderValue: Double = 0
     
+    @FocusState var keyboardActrive: Bool
+    
     var body: some View {
         ZStack {
             Color(.yellow)
                 .ignoresSafeArea()
+                .onTapGesture { keyboardActrive = false }
             VStack() {
-                ColorView(color: Color(
-                    red: redSliderValue / 255,
-                    green: greenSliderValue / 255,
-                    blue: blueSliderValue / 255))
+                ColorView(red: redSliderValue, green: greenSliderValue, blue: blueSliderValue)
+                
                 Spacer()
                 ColorSliderView(sliderValue: $redSliderValue, sliderColor: .red)
                 ColorSliderView(sliderValue: $greenSliderValue, sliderColor: .green)
                 ColorSliderView(sliderValue: $blueSliderValue, sliderColor: .blue)
                 Spacer()
             }
-            .onTapGesture { hideKeyboard() }
+            .focused($keyboardActrive)
+            .toolbar(content: {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button("Done") {
+                        keyboardActrive = false
+                    }
+                }
+            })
             .padding()
         }
     }
@@ -36,12 +45,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-    }
-}
-
-extension View {
-    func hideKeyboard() {
-        let resign = #selector(UIResponder.resignFirstResponder)
-        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
     }
 }
